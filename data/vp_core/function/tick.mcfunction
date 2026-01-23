@@ -1,6 +1,9 @@
 #vp_core:tick
 # vp_core:_init异步调用
 
+# 玩家登入
+execute as @a unless score @s vp_lg matches -1 run function vp_core:lg_player
+
 # 玩家交互框架
 execute as @a run function vp_core:player_main
 
