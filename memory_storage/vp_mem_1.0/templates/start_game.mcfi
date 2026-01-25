@@ -1,0 +1,7 @@
+#$(module_prefix)start_game
+# $(module_prefix)main调用
+
+# 设置游戏开始
+
+# 下一刻跳转到进行状态
+data modify storage vp_core:io game_state set value "running"

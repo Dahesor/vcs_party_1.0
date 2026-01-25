@@ -1,3 +1,8 @@
 #$(module_prefix)main
 # vp_game主程序
 
+data modify storage $(project_name):io temp_state set from storage vp_core:io game_state
+# 选择状态分支
+execute if data storage $(project_name):io {temp_state:"prepared"} run function $(module_prefix)start_game
+execute if data storage $(project_name):io {temp_state:"running"} run function $(module_prefix)running
+execute if data storage $(project_name):io {temp_state:"rewarding"} run function $(module_prefix)rewarding
