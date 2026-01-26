@@ -11,8 +11,11 @@ scoreboard players set 48 int 48
 data modify storage math:io xyz set value [0.0d,0.0d,0.0d]
 data modify storage math:io scale set value [0.0f,0.0f,0.0f]
 
-# 初始化各模块
+# 初始化各个内置工具模块
 function vp_core:utils/chunk_area/init
+function vp_core:utils/game_control/init
+
+# 初始化各个内置构造器模块
 function vp_core:utils/area_clear/init
 function vp_core:utils/chunk_loader/init
 function vp_core:utils/structure_builder/init

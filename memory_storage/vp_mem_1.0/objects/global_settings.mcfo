@@ -23,5 +23,5 @@ entity_type:marker
 
 # 初始化模块时创建的接口
 init_interfaces:{
-	_build_async_main,_build_async_start,_del_async_main,_del_async_start,_get_tp_points,_init,_model,_pop,_proj,_push,_reg,_set_player,_zero,del_loop,gain_emerald,main,rewarding,running,shift_tp_points,start_game
+	del_loop, gain_emerald, main, rewarding, running, shift_tp_points, start_game, _build_async_main, _build_async_start, _del_async_main, _del_async_start, _get_tp_points, _init, _model, _pop, _proj, _push, _reg, _set_player, _start_check, _zero
 }

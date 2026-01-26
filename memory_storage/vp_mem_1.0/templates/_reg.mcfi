@@ -3,6 +3,7 @@
 
 function $(module_prefix)_zero
 # 设置模块基本信息
+data modify storage vp_core:io game_namespace set value "$(project_name)"
 data modify storage vp_core:io game_prefix set value "$(module_prefix)"
 data modify storage vp_core:io game_name set value {text:"example_name",color:"aqua"}
 data modify storage vp_core:io game_desc set value [\

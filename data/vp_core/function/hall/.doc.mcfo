@@ -1,0 +1,9 @@
+#vp_core:hall/doc.mcfo
+
+# hall临时对象
+_this:{
+	hall_center:[storage vp_core:io hall_center,ListDouble,3],
+	hall_size:[storage vp_core:io hall_size,Int],
+	hall_height:[storage vp_core:io hall_height,Int],
+	hall_prefix:[storage vp_core:io hall_prefix,String]
+}

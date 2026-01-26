@@ -1,4 +1,5 @@
 _this:{
+	game_namespace:[storage vp_core:io game_namespace,String],
 	game_prefix:[storage vp_core:io game_prefix,String],
 	game_name:[storage vp_core:io game_name,Compound],
 	game_desc:[storage vp_core:io game_desc,ListCompound],

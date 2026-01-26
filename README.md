@@ -41,6 +41,7 @@ vcs_party是一款适用于原版mc数据包开发的派对小游戏框架，包
 
 ```
 _this:{
+	game_namespace:[storage vp_core:io game_namespace,String],
 	game_prefix:[storage vp_core:io game_prefix,String],
 	game_name:[storage vp_core:io game_name,Compound],
 	game_desc:[storage vp_core:io game_desc,ListCompound],
@@ -55,6 +56,7 @@ _this:{
 
 编辑模块目录下的_reg接口完成信息载入。
 
+* game_namespace用于设置小游戏命名空间，mot_2.0已经自动设置完成。
 * game_prefix用于设置小游戏模块前缀，mot_2.0已经自动设置完成。
 * game_name用于设置小游戏的名称
 * game_desc用于设置小游戏的介绍
