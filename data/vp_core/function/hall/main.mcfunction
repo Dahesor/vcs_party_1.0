@@ -1,3 +1,3 @@
 #vp_core:hall/main
-# vp_core:tick调用
+# vp_core:_gen异步调用
 

@@ -4,7 +4,4 @@
 function vp_core:_reset_player
 $function $(set_player_func)
 
-tag @s remove vp_inhall
-tag @s remove vp_joiner
-tag @s add vp_player
-tag @s add vp_gamer
+function vp_core:player_types/gamer/_be
