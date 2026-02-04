@@ -29,7 +29,7 @@ vcs_party是一款适用于原版mc数据包开发的派对小游戏框架，包
 ## 2.框架协议
 
 框架协议支持mot_2.0推送，请下载并运行mot_2.0: https://github.com/xiaodou8593/mot_2.0  
-~~将memory_storage文件夹中的记忆模板(vp_mem_1.0, vp_constructor_1.0, vp_hall_1.0)复制到mot_2.0本体的memory_storage文件夹即可。~~（新版本mot无需该操作）
+~~将memory_storage文件夹中的记忆模板(vp_mem_1.0, vp_constructor_1.0, vp_hall_1.0)复制到mot_2.0本体的memory_storage文件夹即可。~~（新版本mot无需该操作，确保datapacks文件夹中有vcs_party数据包即可）
 
 请寻找一个目录作为小游戏模块，它必须位于data/命名空间/function或更下层。
 
