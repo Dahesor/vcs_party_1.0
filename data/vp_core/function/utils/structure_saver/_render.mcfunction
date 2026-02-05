@@ -25,12 +25,6 @@ summon item_display 0 0 0 {transformation:{scale:[0.1f,0.1f,0.1f],right_rotation
 # 边缘宽度
 scoreboard players set temp_margin int 5
 
-# 设置边框长度
-execute as @e[tag=result,tag=vp_display] store result entity @s transformation.scale[] float 0.2 run scoreboard players get temp_margin int
-execute as @e[tag=result,tag=vp_display_x] store result entity @s transformation.scale[0] float 0.2 run scoreboard players get temp_l int
-execute as @e[tag=result,tag=vp_display_y] store result entity @s transformation.scale[1] float 0.2 run scoreboard players get temp_h int
-execute as @e[tag=result,tag=vp_display_z] store result entity @s transformation.scale[2] float 0.2 run scoreboard players get temp_l int
-
 # 设置存在时间
 scoreboard players operation @e[tag=result] killtime = duration int
 
@@ -43,6 +37,12 @@ execute store result score temp_h int run data get storage vp_core:io field_heig
 scoreboard players operation temp_l int += temp_margin int
 scoreboard players operation temp_y int -= temp_margin int
 scoreboard players operation temp_h int += temp_margin int
+
+# 设置边框长度
+execute as @e[tag=result,tag=vp_display] store result entity @s transformation.scale[] float 0.2 run scoreboard players get temp_margin int
+execute as @e[tag=result,tag=vp_display_x] store result entity @s transformation.scale[0] float 0.2 run scoreboard players get temp_l int
+execute as @e[tag=result,tag=vp_display_y] store result entity @s transformation.scale[1] float 0.2 run scoreboard players get temp_h int
+execute as @e[tag=result,tag=vp_display_z] store result entity @s transformation.scale[2] float 0.2 run scoreboard players get temp_l int
 
 # 计算x轴边框位置
 execute store result storage math:io xyz[0] double 0.1 run scoreboard players get temp_x int

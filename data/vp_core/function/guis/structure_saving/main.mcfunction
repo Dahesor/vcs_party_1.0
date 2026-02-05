@@ -9,7 +9,7 @@ data modify storage vp_core:io input set from storage iframe:io player.structure
 function vp_core:utils/structure_saver/_proj
 
 # 渲染结构方块区域
-scoreboard players set duration int 2
+scoreboard players set duration int 3
 execute as @e[tag=math_marker,limit=1] run function vp_core:utils/structure_saver/_render
 
 # 显示结构前缀

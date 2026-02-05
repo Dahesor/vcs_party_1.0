@@ -16,7 +16,7 @@ execute unless score temp_prefix int matches 1 run return run tellraw @a {text:"
 function iframe:player_space/_get
 data modify storage vp_core:io field_index set value -1
 function vp_core:utils/structure_saver/_model
-data modify storage iframe:io player_space.structure_saver_plate set from storage vp_core:io result
+data modify storage iframe:io player.structure_saver_plate set from storage vp_core:io result
 function iframe:player_space/_store
 
 # 当前界面入栈

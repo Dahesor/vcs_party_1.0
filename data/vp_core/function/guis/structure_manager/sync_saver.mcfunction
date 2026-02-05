@@ -23,7 +23,7 @@ scoreboard players operation temp_size_z int -= temp_start_z int
 execute if score temp_size_z int matches ..-1 run scoreboard players operation temp_size_z int *= -1 int
 scoreboard players operation temp_size int > temp_size_z int
 scoreboard players operation temp_size int /= 10 int
-scoreboard players add temp_size int 48
+scoreboard players add temp_size int 47
 execute store result storage vp_core:io field_size int 1 run scoreboard players operation temp_size int /= 48 int
 
 # 计算高度尺寸
@@ -31,7 +31,7 @@ scoreboard players operation temp_size int = temp_end_y int
 scoreboard players operation temp_size int -= temp_start_y int
 execute if score temp_size int matches ..-1 run scoreboard players operation temp_size int *= -1 int
 scoreboard players operation temp_size int /= 10 int
-scoreboard players add temp_size int 48
+scoreboard players add temp_size int 47
 execute store result storage vp_core:io field_height int 1 run scoreboard players operation temp_size int /= 48 int
 
 # 计算中心坐标
