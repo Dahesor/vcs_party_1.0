@@ -16,8 +16,8 @@ scoreboard players operation temp_ey int = temp_sz int
 scoreboard players operation temp_ez int = temp_sz int
 scoreboard players operation temp_sx int -= temp_l int
 scoreboard players operation temp_sz int -= temp_l int
-scoreboard players operation temp_sx int += temp_l int
-scoreboard players operation temp_sz int += temp_l int
+scoreboard players operation temp_ex int += temp_l int
+scoreboard players operation temp_ez int += temp_l int
 scoreboard players operation temp_ey int += temp_h int
 scoreboard players remove temp_sx int 1
 scoreboard players remove temp_sy int 1
@@ -43,11 +43,11 @@ data modify entity @s Pos set from storage math:io xyz
 execute at @s run fill ~ ~ ~ ~ ~47 ~47 barrier
 
 # x方向序号迭代
-scoreboard players add x_index int 1
+execute if score x_index int < x_area int run scoreboard players add x_index int 1
 scoreboard players operation vp_progress int = x_index int
 scoreboard players operation vp_progress int *= 100 int
 scoreboard players operation vp_progress int /= x_area int
-scoreboard players operation x_index int %= x_area int
+execute if score x_index int = x_area int run scoreboard players remove x_index int 1
 
 # 计算z方向表面
 scoreboard players operation temp_x int = z_index int
@@ -62,8 +62,9 @@ data modify entity @s Pos set from storage math:io xyz
 execute at @s run fill ~ ~ ~ ~47 ~47 ~ barrier
 
 # z方向序号迭代
-scoreboard players add z_index int 1
+execute if score z_index int < z_area int run scoreboard players add z_index int 1
 scoreboard players operation z_index int %= z_area int
+execute if score z_index int = z_area int run scoreboard players remove z_index int 1
 
 # 计算y方向表面
 scoreboard players operation temp_x int = y_index int
@@ -78,11 +79,11 @@ data modify entity @s Pos set from storage math:io xyz
 execute at @s run fill ~ ~ ~ ~47 ~ ~47 barrier
 
 # y方向序号迭代
-scoreboard players add y_index int 1
+execute if score y_index int < y_area int run scoreboard players add y_index int 1
 scoreboard players operation temp_p int = y_index int
 scoreboard players operation temp_p int *= 100 int
 scoreboard players operation temp_p int /= y_area int
-scoreboard players operation y_index int %= x_area int
+execute if score y_index int = y_area int run scoreboard players remove y_index int 1
 scoreboard players operation vp_progress int < temp_p int
 scoreboard players operation vp_progress int > 1 int
 

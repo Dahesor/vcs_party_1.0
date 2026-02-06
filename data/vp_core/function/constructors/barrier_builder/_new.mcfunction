@@ -4,5 +4,5 @@
 # 输出 @e[tag=result,limit=1]
 
 tag @e[tag=result] remove result
-summon marker 0 0 0 {Tags:["barrier_builder", "result"]}
+summon marker 0 0 0 {Tags:["vp_constructor", "barrier_builder", "result"], CustomName:"barrier_builder"}
 execute as @e[tag=result,limit=1] run function vp_core:constructors/barrier_builder/set

@@ -4,5 +4,5 @@
 # 输出 @e[tag=result,limit=1]
 
 tag @e[tag=result] remove result
-summon marker 0 0 0 {Tags:["player_teleport", "result"]}
+summon marker 0 0 0 {Tags:["vp_constructor", "player_teleport", "result"], CustomName:"player_teleport"}
 execute as @e[tag=result,limit=1] run function vp_core:constructors/player_teleport/set

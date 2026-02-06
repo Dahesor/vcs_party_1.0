@@ -4,5 +4,5 @@
 # 输出 @e[tag=result,limit=1]
 
 tag @e[tag=result] remove result
-summon marker 0 0 0 {Tags:["chunk_loader", "result"]}
+summon marker 0 0 0 {Tags:["vp_constructor", "chunk_loader", "result"], CustomName:"chunk_loader"}
 execute as @e[tag=result,limit=1] run function vp_core:constructors/chunk_loader/set
