@@ -23,5 +23,5 @@ entity_type:marker
 
 # 初始化模块时创建的接口
 init_interfaces:{
-	main, _del, _gen, _model, _proj, _reg
+	gen_structure, main, _del, _enter, _gen, _model, _proj, _reg
 }

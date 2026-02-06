@@ -1,4 +1,4 @@
 #vp_core:utils/structure_saver/place_structure
 # vp_core:utils/structure_saver/_place_structure调用
 
-$place structure $(structure_prefix)$(field_index) ~ ~ ~
+$place template $(structure_prefix)$(field_index) ~ ~ ~

@@ -16,12 +16,12 @@ function vp_core:utils/chunk_area/init
 function vp_core:utils/game_control/init
 
 # 初始化各个内置构造器模块
-function vp_core:utils/area_clear/init
-function vp_core:utils/chunk_loader/init
-function vp_core:utils/structure_builder/init
-function vp_core:utils/barrier_builder/init
-function vp_core:utils/player_setup/init
-function vp_core:utils/player_teleport/init
+function vp_core:constructors/area_clear/init
+function vp_core:constructors/chunk_loader/init
+function vp_core:constructors/structure_builder/init
+function vp_core:constructors/barrier_builder/init
+function vp_core:constructors/player_setup/init
+function vp_core:constructors/player_teleport/init
 
 # 初始化玩家空间数据结构
 function vp_core:player_space/init

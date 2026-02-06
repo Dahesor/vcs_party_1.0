@@ -41,7 +41,7 @@ execute store result storage math:io xyz[1] double 1 run scoreboard players get 
 execute store result storage math:io xyz[2] double 1 run scoreboard players get temp_z int
 data modify entity @s Pos set from storage math:io xyz
 # 生成结构
-execute at @s run place structure vp_core:void ~ ~ ~
+execute at @s run place template vp_core:void ~ ~ ~
 
 # 区块安全
 tp @s 0 0 0
