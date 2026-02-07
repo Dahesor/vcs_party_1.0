@@ -172,6 +172,8 @@ vcs_party框架流通的货币：绿宝石。玩家参与游戏，胜利后可�
 
 ## 3.框架核心
 
+下载并安装前置依赖iframe_1.2：https://github.com/xiaodou8593/iframe_1.2
+
 初始化vcs_party内核及其前置依赖：
 
 ```
