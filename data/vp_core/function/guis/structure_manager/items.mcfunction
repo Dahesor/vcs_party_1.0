@@ -85,6 +85,55 @@ item replace entity @s hotbar.4 with minecraft:music_disc_cat[\
 	}\
 ]
 
+item replace entity @s hotbar.5 with minecraft:iron_pickaxe[\
+	minecraft:custom_name={\
+		text:"build structure",\
+		color:"gold"\
+	},\
+	minecraft:custom_data={\
+		iframe_ui:1b,\
+		button:5b\
+	},\
+	minecraft:consumable={\
+		consume_seconds:1024.0f\
+	}\
+]
+
+item replace entity @s hotbar.6 with minecraft:brush[\
+	minecraft:custom_name={\
+		text:"clear area",\
+		color:"red"\
+	},\
+	minecraft:custom_data={\
+		iframe_ui:1b,\
+		button:6b\
+	},\
+	minecraft:consumable={\
+		consume_seconds:1024.0f\
+	}\
+]
+
+item replace entity @s hotbar.7 with minecraft:shulker_spawn_egg[\
+	minecraft:entity_data={\
+		id:"minecraft:shulker",\
+		NoAI:1b,\
+		Silent:1b,\
+		Color:10b,\
+		Tags:["vp_map_point","map_point"],\
+		CustomName:"map_point",\
+		CustomNameVisible:1b,\
+		DeathLootTable:""\
+	},\
+	minecraft:custom_name={\
+		text:"map_point",\
+		color:"dark_purple"\
+	},\
+	minecraft:custom_data={\
+		iframe_ui:1b,\
+		button:7b\
+	}\
+]
+
 item replace entity @s hotbar.8 with minecraft:clay_ball[\
 	minecraft:custom_data={\
 		iframe_ui:1b,\

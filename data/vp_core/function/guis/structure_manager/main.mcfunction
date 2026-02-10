@@ -21,12 +21,28 @@ execute unless data storage iframe:io inv[{Slot:1b}].components."minecraft:custo
 execute unless data storage iframe:io inv[{Slot:2b}].components."minecraft:custom_data"{button:2b} run scoreboard players set update_gui int 1
 execute unless data storage iframe:io inv[{Slot:3b}].components."minecraft:custom_data"{button:3b} run scoreboard players set update_gui int 1
 execute unless data storage iframe:io inv[{Slot:4b}].components."minecraft:custom_data"{button:4b} run scoreboard players set update_gui int 1
+execute unless data storage iframe:io inv[{Slot:5b}].components."minecraft:custom_data"{button:5b} run scoreboard players set update_gui int 1
+execute unless data storage iframe:io inv[{Slot:6b}].components."minecraft:custom_data"{button:6b} run scoreboard players set update_gui int 1
+execute unless data storage iframe:io inv[{Slot:7b}].components."minecraft:custom_data"{button:7b} run scoreboard players set update_gui int 1
 execute if data storage iframe:io inv[{Slot:3b,id:"minecraft:written_book"}] run scoreboard players set update_gui int 1
 
 # 存储结构按钮
 execute if score @s iframe_crc_state matches 1 \
 	if data storage iframe:io sel.components."minecraft:custom_data"{button:4b} \
 	run function vp_core:guis/structure_manager/save_button
+
+# 建造结构按钮
+execute if score @s iframe_crc_state matches 1 \
+	if data storage iframe:io sel.components."minecraft:custom_data"{button:5b} \
+	run function vp_core:guis/structure_manager/build_button
+
+# 清理区域按钮
+execute if score @s iframe_crc_state matches 1 \
+	if data storage iframe:io sel.components."minecraft:custom_data"{button:6b} \
+	run function vp_core:guis/structure_manager/clear_button
+
+# 地图传送点
+execute as @e[tag=vp_map_point] run function vp_core:guis/structure_manager/map_point
 
 execute if score update_gui int matches 1 run function vp_core:guis/structure_manager/items
 
