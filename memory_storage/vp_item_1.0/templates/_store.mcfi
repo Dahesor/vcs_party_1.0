@@ -1,0 +1,11 @@
+#$(module_prefix)_store
+# 临时对象储存到实例
+# 输入物品实例对象storage vp_core:io this_item
+# 输入持有物品的玩家为执行者
+
+function $(module_prefix)_model
+data modify storage vp_core:io this_item.components."minecraft:custom_data".item_instance.data set from storage $(project_name):io result
+
+# 储存回实例
+data modify entity 0-0-0-0-2 item set from storage vp_core:io this_item
+item replace entity @s weapon.mainhand from entity 0-0-0-0-2 container.0

@@ -1,0 +1,6 @@
+#$(module_prefix)_get
+# 获取实例对象到临时对象
+# 输入物品实例对象storage vp_core:io this_item
+
+data modify storage $(project_name):io input set from storage vp_core:io this_item.components."minecraft:custom_data".item_instance.data
+function $(module_prefix)_proj

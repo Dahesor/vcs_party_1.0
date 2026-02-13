@@ -23,5 +23,5 @@ entity_type:marker
 
 # 初始化模块时创建的接口
 init_interfaces:{
-	death_func, gen_structure, main, respawn_func, _del, _enter, _gen, _model, _proj, _reg
+	death_func, gen_structure, kill_instance, main, respawn_func, _del, _enter, _gen, _model, _proj, _reg
 }

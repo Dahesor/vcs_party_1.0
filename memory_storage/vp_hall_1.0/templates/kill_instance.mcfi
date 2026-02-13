@@ -1,0 +1,5 @@
+#$(module_prefix)kill_instance
+# $(module_prefix)_del调用
+
+execute unless score @s module_id matches 0.. run return run kill @s
+function module_control:_call_method {path:"_del"}

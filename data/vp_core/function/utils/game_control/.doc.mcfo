@@ -2,6 +2,7 @@
 
 # game_control临时对象
 _this:{
+	list_games:[storage vp_core:class list_games,ListCompound],
 	control_plate:[storage vp_core:io control_plate,Compound],
 	control_state:[storage vp_core:io control_state,String]
 }

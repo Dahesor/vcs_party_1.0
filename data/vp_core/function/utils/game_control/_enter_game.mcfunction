@@ -7,6 +7,9 @@ function vp_core:utils/game_control/call_enter_check with storage vp_core:io con
 execute if score res int matches 0 run return run scoreboard players set res int 0
 execute unless data storage vp_core:io {control_state:"waiting"} run return run scoreboard players set res int 0
 
+# 重置游戏规则
+function vp_core:_reset_rules
+
 # 游戏模板投射到临时对象
 function vp_core:utils/game_control/proj_plate with storage vp_core:io control_plate
 # 开始构造游戏实例

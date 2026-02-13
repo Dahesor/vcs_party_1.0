@@ -1,0 +1,7 @@
+#vp_core:utils/ender_gui/doc.mcfo
+
+# ender_gui临时对象
+_this:{
+	open_gui:[storage vp_core:io open_gui,String],
+	custom_name:[storage vp_core:io custom_name,Compound]
+}

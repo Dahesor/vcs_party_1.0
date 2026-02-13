@@ -2,10 +2,12 @@
 # 重置一名玩家的全部身体属性
 # 输入玩家为执行者
 
+execute if entity @s[tag=iframe_player] run function iframe:_exit_pure
 ride @s dismount
 xp set @s 0 levels
 xp set @s 0 points
 clear @s
+function iframe:_clear_ender
 team leave @s
 effect clear @s
 effect give @s minecraft:saturation 1 100 true

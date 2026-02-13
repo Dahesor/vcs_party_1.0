@@ -10,3 +10,6 @@ scoreboard players operation vp_progress int = temp_index int
 scoreboard players operation vp_progress int *= 100 int
 scoreboard players operation vp_progress int /= res int
 scoreboard players operation vp_progress int > 1 int
+
+# 清理掉落物
+kill @e[type=item,tag=]

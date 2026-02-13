@@ -1,0 +1,22 @@
+#$(module_prefix)_gain
+# 获得$(module_name)实例对象
+# 输出storage $(project_name):io result
+
+# sel_func:手持执行, off_func:副手执行, inv_func:背包执行, head_func:头戴执行, chest_func:胸甲执行, legs_func:护腿执行, feet_func:脚部执行
+data modify storage $(project_name):io result set value {\
+	id:"minecraft:glass",\
+	count:1b,\
+	components:{\
+		"minecraft:custom_name":{\
+			text:"$(module_name)",\
+			"color":"red"\
+		},\
+		"minecraft:custom_data":{\
+			item_instance:{\
+				sel_func:"$(module_prefix)main",\
+				data:{\
+				}\
+			}\
+		}\
+	}\
+}

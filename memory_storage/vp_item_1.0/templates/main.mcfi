@@ -1,0 +1,6 @@
+#$(module_prefix)main
+# $(module_name)主程序
+
+title @s times 0 2 0
+title @s title ""
+title @s subtitle {"text":"holding $(module_name)","color":"aqua"}

@@ -1,0 +1,15 @@
+#$(module_prefix)_reg_souvenir
+# 注册纪念品
+
+data remove storage vp_core:io list_souvenirs[{prefix:"$(module_prefix)"}]
+data modify storage vp_core:io list_souvenirs append value {\
+	id:"minecraft:glass",\
+	count:1b,\
+	components:{\
+		"minecraft:custom_name":{"text":"$(module_name)","color":"aqua"}\
+	},\
+	prefix:"$(module_prefix)",\
+	namespace:"$(project_name)",\
+	CD:600,\
+	price:35\
+}

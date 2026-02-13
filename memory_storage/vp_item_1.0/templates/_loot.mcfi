@@ -1,0 +1,9 @@
+#$(module_prefix)_loot
+# 获得$(module_name)掉落物实例
+# 输入执行位置
+# 输出entity @e[tag=result,limit=1]
+
+function $(module_prefix)_gain
+tag @e[tag=result] remove result
+summon item ~ ~ ~ {Tags:["result"],Item:{id:"minecraft:glass",count:1b}}
+data modify entity @e[tag=result,limit=1] Item set from storage $(project_name):io result
