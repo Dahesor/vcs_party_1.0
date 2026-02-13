@@ -2,7 +2,7 @@
 # 标签#vp_core:iter_player
 # vp_core:player_main调用
 
-# 构建物品实例对象
+# 物品实例对象程序
 data modify storage vp_core:io item_instance set value []
 data modify storage vp_core:io item_instance append from storage vp_core:io inv[{components:{"minecraft:custom_data":{item_instance:{}}}}]
 data modify storage vp_core:io item_instance append from storage vp_core:io equ.offhand{components:{"minecraft:custom_data":{item_instance:{}}}}

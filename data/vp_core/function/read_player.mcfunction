@@ -2,7 +2,10 @@
 # 标签#vp_core:read_player
 # vp_core:player_main调用
 
+# using_item长按数据
 execute store result score vp_crc int run scoreboard players operation @s vp_crc /= 2 int
+
+# 玩家背包数据
 data modify storage vp_core:io player_dump set from entity @s {}
 data modify storage vp_core:io inv set from storage vp_core:io player_dump.Inventory
 data modify storage vp_core:io equ set value {}
@@ -16,7 +19,7 @@ data modify storage vp_core:io sel set value {}
 data modify storage vp_core:io sel set from storage vp_core:io player_dump.SelectedItem
 execute store result score sel_slot int run data get storage vp_core:io player_dump.SelectedItemSlot
 
-# 读取末影箱交互英文
+# 读取末影箱交互行为
 scoreboard players operation vp_open_ender int = @s vp_open_ender
 scoreboard players set @s vp_open_ender 0
 
