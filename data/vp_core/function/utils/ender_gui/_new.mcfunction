@@ -5,6 +5,6 @@
 # 输出 @e[tag=result,limit=1]
 
 tag @e[tag=result] remove result
-summon text_display ~ ~ ~ {Tags:["vp_ender_gui", "result"]}
+summon text_display ~ ~ ~ {Tags:["vp_ender_gui", "result"],CustomName:"ender_gui"}
 execute as @e[tag=result,limit=1] run function vp_core:utils/ender_gui/set
 execute as @e[tag=result,limit=1] at @s align xyz positioned ~0.5 ~0.5 ~0.5 run function vp_core:utils/ender_gui/set_operation

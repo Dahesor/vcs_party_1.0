@@ -16,6 +16,7 @@ scoreboard players operation temp_total int /= 14 int
 scoreboard players operation temp_len int %= 14 int
 execute if score temp_cur int < temp_total int run scoreboard players set temp_len int 14
 execute if score temp_len int matches 0 run scoreboard players set temp_len int 14
+execute if score temp_total int matches 0 run scoreboard players set temp_len int 0
 
 data modify storage vp_core:io result.list set value []
 execute store result storage vp_core:io result.total int 1 run scoreboard players get temp_total int
