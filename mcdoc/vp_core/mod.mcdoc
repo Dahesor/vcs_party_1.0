@@ -1,0 +1,126 @@
+use ::java::util::text::TextObject
+use ::java::world::item::ItemStack
+use ::java::util::color::RGBA
+use ::java::util::avatar::Profile
+use ::java::world::item::ItemStack
+use ::java::world::component::DataComponentPatch
+use ::java::data::dialog::Dialog
+use ::java::util::text::TextBase
+use ::java::util::text::Keybind
+use ::java::util::text::TextNbtBase
+
+type NullableText = (
+	string |
+	NullableTextObject |
+	[NullableText] |
+)
+
+
+type NullableTextObject = (
+	struct {
+		text?: string,
+		#[since="1.20.3"]
+		type?: "text",
+		...TextBase,
+	} |
+	struct {
+		translate?: #[translation_key] string,
+		#[since="1.19.4"]
+		fallback?: #[translation_value] string,
+		with?: [NullableText],
+		#[since="1.20.3"]
+		type?: "translatable",
+		...TextBase,
+	} |
+	struct {
+		score?: struct {
+			objective: #[objective] string,
+			name: #[score_holder] string,
+		},
+		#[since="1.20.3"]
+		type?: "score",
+		...TextBase,
+	} |
+	struct {
+		selector?: #[entity] string,
+		#[since="1.17"]
+		separator?: NullableText,
+		#[since="1.20.3"]
+		type?: "selector",
+		...TextBase,
+	} |
+	struct {
+		keybind?: Keybind,
+		#[since="1.20.3"]
+		type?: "keybind",
+		...TextBase,
+	} |
+	struct {
+		block?: #[vector(dimension=3,integer=true)] string,
+		nbt: #[nbt_path=minecraft:block[%fallback]] string,
+		#[since="1.20.3"]
+		source?: "block",
+		#[since="1.20.3"]
+		type?: "nbt",
+		...TextNbtBase,
+	} |
+	struct {
+		entity?: #[entity(amount="multiple",type="entities")] string,
+		nbt: #[nbt_path=minecraft:entity[[entity]]] string,
+		#[since="1.20.3"]
+		source?: "entity",
+		#[since="1.20.3"]
+		type?: "nbt",
+		...TextNbtBase,
+	} |
+	struct {
+		storage?: #[id="storage"] string,
+		nbt: #[nbt_path=minecraft:storage[[storage]]] string,
+		#[since="1.20.3"]
+		source?: "storage",
+		#[since="1.20.3"]
+		type?: "nbt",
+		...TextNbtBase,
+	} |
+	#[since="1.21.9"]
+	struct {
+		/// Defaults to `minecraft:blocks`.
+		atlas?: #[id="atlas"] string,
+		sprite?: #[id="texture"] string,
+		object?: "atlas",
+		type?: "object",
+		...TextBase,
+	} |
+	#[since="1.21.9"]
+	struct {
+		player?: Profile,
+		/// Whether the head layer is rendered. Defaults to `true`.
+		hat?: boolean,
+		object?: "player",
+		type?: "object",
+		...TextBase,
+	} |
+)
+
+
+dispatch minecraft:storage["vp_core:io"] to struct{
+    game_namespace?: string,
+    game_prefix?: string,
+    game_name?: NullableText,
+    game_desc?: [NullableText],
+    game_display?: struct{
+        item_icon?: ItemStack,
+        head_pic?: ItemStack
+    },
+    version_range?: [int @ 0..] @2,
+    game_state?: string,
+    field_size?: int @ 0..,
+    field_height?: int @ 0..,
+    field_center?: [double],
+    input?: any,
+    result?: struct{
+        death_func?: #[id=function] string,
+        respawn_func?: #[id=function] string,
+    },
+    [any]?: any
+}
